@@ -11,9 +11,9 @@ These instructions will get you a copy of the project up and running on your loc
 ### Bill of Materials
 
 ```
-- RTC
-- IMU
-- OLED screens
+- RTC (DS3231)
+- IMU (MPU-6050)
+- OLED screens (SSD1306?)
 - Rasperry pi Zero W
 - Neopixels
 - Various 3d printed parts
