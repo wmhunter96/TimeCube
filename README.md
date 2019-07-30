@@ -10,18 +10,17 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Bill of Materials
 
-```
-- RTC (DS3231) - https://amzn.to/315dmPr
-- IMU (MPU-6050) - https://amzn.to/2YAOMrY
-- OLED screens (SSD1306?)  - https://amzn.to/310JpQw
-- Rasperry pi Zero W - https://amzn.to/314JqTK
+- RTC (DS3231) - [https://amzn.to/315dmPr](https://amzn.to/315dmPr)
+- IMU (MPU-6050) - [https://amzn.to/2YAOMrY](https://amzn.to/2YAOMrY)
+- OLED screens (SSD1306?)  - [https://amzn.to/310JpQw](https://amzn.to/310JpQw)
+- Rasperry pi Zero W - [https://amzn.to/314JqTK](https://amzn.to/314JqTK)
 - Neopixels
 - Various 3d printed parts
-- USB C breakout - https://amzn.to/2STxCRo
+- USB C breakout - [https://amzn.to/2STxCRo](https://amzn.to/2STxCRo)
 - Charge controller
 - 18650 cells
-- Power switch - https://amzn.to/2LNmepm
-```
+- Power switch - [https://amzn.to/2LNmepm](https://amzn.to/2LNmepm)
+
 
 ### Prerequisites
 
