@@ -3,13 +3,14 @@ import Adafruit_SSD1306
 import Image
 import ImageDraw
 import ImageFont
+from datetime import datetime
 
 display_padding = 10
 font = ImageFont.load_default()
 
 if __name__ == "__main__":
 	#initalize IMU
-	imu = mpu6050(0x68)
+	imu = mpu6050(0x69)
 
 	#initialize screen
 	display = Adafruit_SSD1306.SSD1306_128_32(24)
@@ -19,6 +20,8 @@ if __name__ == "__main__":
 
 	up_axis = ""
 	prev_up_axis = ""
+	date_time = ""
+	prev_date_time = ""
 	while True:
 		#read accelerometer
 		accel_data = imu.get_accel_data()
@@ -52,5 +55,10 @@ if __name__ == "__main__":
 		#display.clear()
 		draw.text((display_padding, display_padding), prev_up_axis, font=font, fill=0)
 		draw.text((display_padding, display_padding), up_axis, font=font, fill=255)
+		now = datetime.now()
+		prev_date_time = date_time
+		date_time = now.strftime("%Y-%m-%d %H:%M:%S")
+		draw.text((display_padding, display_padding*2), prev_date_time, font=font, fill=0) 
+		draw.text((display_padding, display_padding*2), date_time, font=font, fill=255)
 		display.image(image)
 		display.display()
