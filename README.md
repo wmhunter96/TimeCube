@@ -87,7 +87,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 * **Hunter Rodriguez** - [Github](https://github.com/wmhunter96)
 * **Brian Bugert** - [Github](https://github.com/coolbots7)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/wmhunter96/TimeCube/graphs/contributors) who participated in this project.
 
 ## License
 
