@@ -73,6 +73,10 @@ IMU
 ```
 https://pypi.org/project/mpu6050-raspberrypi/
 ```
+OLED
+```
+https://learn.adafruit.com/ssd1306-oled-displays-with-raspberry-pi-and-beaglebone-black/usage
+```
 
 
 End with an example of getting some data out of the system or using it for a little demo
