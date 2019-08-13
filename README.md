@@ -40,13 +40,33 @@ A step by step series of examples that tell you how to get a development env run
 Say what the step will be
 
 ```
-Give the example
+1. Raspian
+2. Python 3
 ```
 
-And repeat
+do these things too
 
 ```
-until finished
+1. put the below line into the /boot/config.txt file: (edit it with your favourite editor and type the line in - or copy and paste it from here :-) )
+
+dtoverlay=i2c-rtc,ds3231
+
+2. edit the /lib/udev/hwclock-set file (sudo nano /lib/udev/hwclock-set) and "comment out" the following lines ("comment out" means put a # at the beginning of each of the lines, so they become comments and are ignored by the system)
+
+if [ -e /run/systemd/system ] ; then
+exit 0
+fi
+
+so they become:
+
+#if [ -e /run/systemd/system ] ; then
+# exit 0
+#fi
+
+
+reboot
+
+sudo hwclock -r
 ```
 
 End with an example of getting some data out of the system or using it for a little demo
