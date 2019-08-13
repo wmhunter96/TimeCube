@@ -44,7 +44,7 @@ Say what the step will be
 2. Python 3
 ```
 
-do these things too
+RTC
 
 ```
 1. put the below line into the /boot/config.txt file: (edit it with your favourite editor and type the line in - or copy and paste it from here :-) )
@@ -68,6 +68,12 @@ reboot
 
 sudo hwclock -r
 ```
+
+IMU
+```
+https://pypi.org/project/mpu6050-raspberrypi/
+```
+
 
 End with an example of getting some data out of the system or using it for a little demo
 
