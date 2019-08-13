@@ -12,7 +12,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 - RTC (DS3231) - [https://amzn.to/315dmPr](https://amzn.to/315dmPr)
 - IMU (MPU-6050) - [https://amzn.to/2YAOMrY](https://amzn.to/2YAOMrY)
-- OLED screens (SSD1306?)  - [https://amzn.to/310JpQw](https://amzn.to/310JpQw)
+- OLED screens(6) (SSD1306?)  - [https://amzn.to/310JpQw](https://amzn.to/310JpQw)
 - Rasperry pi Zero W - [https://amzn.to/314JqTK](https://amzn.to/314JqTK)
 - Neopixels
 - Various 3d printed parts
@@ -20,6 +20,9 @@ These instructions will get you a copy of the project up and running on your loc
 - Charge controller
 - 18650 cells
 - Power switch - [https://amzn.to/2LNmepm](https://amzn.to/2LNmepm)
+- DC-DC Adjustable Step-up boost Power Converter Module XL6009
+- TCA9548A I2C Multiplexer
+- MP1584EN DC-DC Buck Converter Adjustable Voltage Regulator Step-Down Power Module
 
 
 ### Prerequisites
@@ -37,14 +40,44 @@ A step by step series of examples that tell you how to get a development env run
 Say what the step will be
 
 ```
-Give the example
+1. Raspian
+2. Python 3
 ```
 
-And repeat
+RTC
 
 ```
-until finished
+1. put the below line into the /boot/config.txt file: (edit it with your favourite editor and type the line in - or copy and paste it from here :-) )
+
+dtoverlay=i2c-rtc,ds3231
+
+2. edit the /lib/udev/hwclock-set file (sudo nano /lib/udev/hwclock-set) and "comment out" the following lines ("comment out" means put a # at the beginning of each of the lines, so they become comments and are ignored by the system)
+
+if [ -e /run/systemd/system ] ; then
+exit 0
+fi
+
+so they become:
+
+#if [ -e /run/systemd/system ] ; then
+# exit 0
+#fi
+
+
+reboot
+
+sudo hwclock -r
 ```
+
+IMU
+```
+https://pypi.org/project/mpu6050-raspberrypi/
+```
+OLED
+```
+https://learn.adafruit.com/ssd1306-oled-displays-with-raspberry-pi-and-beaglebone-black/usage
+```
+
 
 End with an example of getting some data out of the system or using it for a little demo
 
@@ -87,7 +120,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 * **Hunter Rodriguez** - [Github](https://github.com/wmhunter96)
 * **Brian Bugert** - [Github](https://github.com/coolbots7)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/wmhunter96/TimeCube/graphs/contributors) who participated in this project.
 
 ## License
 
@@ -98,3 +131,9 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Hat tip to anyone whose code was used
 * Inspiration
 * etc
+
+## Inspiration
+
+* https://timeular.com/
+* https://timeflip.io/
+* https://learn.adafruit.com/time-tracking-cube
