@@ -13,7 +13,7 @@ if __name__ == "__main__":
 	imu = mpu6050(0x69)
 
 	#initialize screen
-	display = Adafruit_SSD1306.SSD1306_128_32(24)
+	display = Adafruit_SSD1306.SSD1306_128_64(24)
 	display.begin()
 	image = Image.new('1', (display.width, display.height))
 	draw = ImageDraw.Draw(image)
